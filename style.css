@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 200px;
+  font-family: "Manrope", sans-serif;
+  background-color: hsl(217, 17%, 15%);
+}
+h1 {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: hsl(150, 100%, 66%);
+}
+header {
+  margin: 20px 0;
+}
+#card {
+  max-width: 340px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: hsl(217, 19%, 24%);
+}
+p {
+  font-size: 28px;
+  color: hsl(193, 38%, 86%);
+}
+.pattern-divider {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: -20px;
+  display: flex;
+  justify-content: center;
+}
+#pattern-divider-desktop {
+  display: none;
+}
+button {
+  position: relative;
+  top: 55px;
+  border-radius: 50%;
+  padding: 20px;
+  border: none;
+  background-color: hsl(150, 100%, 66%);
+}
+.dice-rotate {
+  animation-name: rotate;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+}
+.shine {
+  box-shadow: 0px 0px 30px hsl(150, 100%, 66%);
+}
+button:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 30px hsl(150, 100%, 66%);
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  #card {
+    max-width: 550px;
+  }
+  #pattern-divider-desktop {
+    display: block;
+  }
+  #pattern-divider-mobile {
+    display: none;
+  }
+}
